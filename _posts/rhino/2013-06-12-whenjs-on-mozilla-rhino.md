@@ -9,7 +9,7 @@ Recently I stumpled up on when.js, a great way of doing concurrency in Javascrip
 For example, it allows a very easy API for doing asynchronous operations:
 
 JavaScript
-{code}
+{% highlight javascript %}
 var when = require("when.js");
 function operation (message) {
       var deferred = when.defer();
@@ -20,10 +20,11 @@ function operation (message) {
 }
 
 operation('Hello World').then(
-      function gotIt(img) {
-            console.log(img);
-      });
-{code}
+  function gotIt(img) {
+        console.log(img);
+  }
+);
+{% endhighlight %}
 
 So I decied to try when.js on Mozilla Rhino and share my findings with you. It was rather simple getting when.js to run on Rhino. All I had to do, was to implement a alternative for setTimeout. After I implemented the Rhino version I decided to also implement a version with dynjs.
 

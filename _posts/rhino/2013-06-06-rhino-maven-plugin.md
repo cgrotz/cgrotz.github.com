@@ -7,7 +7,7 @@ tags : [Maven, Javascript, Mozilla Rhino]
 *rhino-maven-plugin* is a Maven plugin to compile Javascript to Java class file using Mozilla Rhino. The compiled classes require Mozilla Rhino to run. The plugin is licensed under the Mozilla Public License 2.0 due to MPL being the license for Rhino
 
 Maven Distribution
-{code}
+{% highlight xml %}
 <build>
   <plugins>
     <plugin>
@@ -17,28 +17,26 @@ Maven Distribution
     </plugin>
   </plugins>
 </build>
-{code}
+{% endhighlight %}
 You can start the compilation be simply calling
-{code}
-mvn rhino:compile
-{code}
+  mvn rhino:compile
 or by adding the following to the plugin tag:
-{code}
+{% highlight xml %}
 <executions>
-<execution>
-<phase>compile</phase>
-<goals>
-<goal>compile</goal>
-</goals>
-</execution>
+  <execution>
+    <phase>compile</phase>
+    <goals>
+      <goal>compile</goal>
+    </goals>
+  </execution>
 </executions>
-{code}
+{% endhighlight %}
 Mozilla Rhino as dependency
-{code}
+{% highlight xml %}
 <dependency>
-<groupId>org.mozilla</groupId>
-<artifactId>rhino</artifactId>
-<version>1.7R4</version>
+  <groupId>org.mozilla</groupId>
+  <artifactId>rhino</artifactId>
+  <version>1.7R4</version>
 </dependency>
-{code}
+{% endhighlight %}
 The artifact is deployed to Maven Central so no repository configuration should be necessary.
