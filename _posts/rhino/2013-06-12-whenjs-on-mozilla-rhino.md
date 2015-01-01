@@ -9,7 +9,7 @@ Recently I stumpled up on when.js, a great way of doing concurrency in Javascrip
 For example, it allows a very easy API for doing asynchronous operations:
 
 JavaScript
-{% highlight javascript %}
+{% highlight js %}
 var when = require("when.js");
 function operation (message) {
       var deferred = when.defer();
